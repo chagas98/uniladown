@@ -26,7 +26,7 @@ removerbordasdohyperlink: 'sim'
 
 # Adiciona a cor Azul a todos os hyperlinks
 
-cordohyperlink: 'nao'
+#cordohyperlink: 'nao'
 
 #####################################################
 ##         Informacao sobre a instituicao          ##
@@ -146,10 +146,8 @@ membrodabancaseisies: 'Universidade do Membro da Banca Seis (SIGLA)'
 ##            Configuracoes do Rmarkdown           ##
 #####################################################
 
-knit: "bookdown::render_book"
-site: bookdown::bookdown_site
 output: 
-  ufscdown::thesis_pdf: 
+  ufcdown::thesis_pdf:
     citation_package: biblatex
     bib_engine: biber
 #  ufcdown::thesis_gitbook: default
@@ -161,20 +159,15 @@ bibliography: "bib/referencias.bib"
 link-citations: yes
 
 dedicatoria: |
-  `r if(knitr:::is_latex_output()) paste(readLines("00-dedicatoria.Rmd"), 
-  collapse = '\n  ')`
+  `r if(knitr:::is_latex_output()) paste(readLines("00-dedicatoria.Rmd", encoding = "UTF-8"), collapse = '\n  ')`
 agradecimentos: |
-  `r if(knitr:::is_latex_output()) paste(readLines("00-agradecimentos.Rmd"), 
-  collapse = '\n  ')`
+  `r if(knitr:::is_latex_output()) paste(readLines("00-agradecimentos.Rmd", encoding = "UTF-8"), collapse = '\n  ')`
 epigrafe: |
-  `r if(knitr:::is_latex_output()) paste(readLines("00-epigrafe.Rmd"), 
-  collapse = '\n  ')`
+  `r if(knitr:::is_latex_output()) paste(readLines("00-epigrafe.Rmd", encoding = "UTF-8"), collapse = '\n  ')`
 resumo: |
-  `r if(knitr:::is_latex_output()) paste(readLines("00-resumo.Rmd"), 
-  collapse = '\n  ')`
+  `r if(knitr:::is_latex_output()) paste(readLines("00-resumo.Rmd", encoding = "UTF-8"), collapse = '\n  ')`
 abstract: |
-  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), 
-  collapse = '\n  ')`
+  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd", encoding = "UTF-8"), collapse = '\n  ')`
 ---
 
 ```{r include_packages, include = FALSE}
@@ -183,14 +176,7 @@ knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message=FALSE,
                       fig.path = "figure/", fig.pos = "H", dev = "png", 
                       dpi = 600, out.width = "70%")
 type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
-# This chunk ensures that the ufcdown package is
-# installed and loaded. This ufcdown package includes
-# the template files for the thesis.
-if(!require(remotes))
-  install.packages("remotes", repos = "http://cran.rstudio.com")
-if(!require(ufcdown))
-  remotes::install_github("damarals/ufcdown")
-library(ufscdown)
+library(ufcdown)
 ```
 
 <!-- The {.unnumbered} option means that the introduction will be 
