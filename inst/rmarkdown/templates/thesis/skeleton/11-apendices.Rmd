@@ -1,0 +1,51 @@
+\imprimirapendices
+
+\apendice{EXEMPLO DE APÊNDICE}
+\label{ap:A}
+
+Um apêndice é um documento elaborado pelo autor, diferentemente do anexo. Geralmente, se coloca como apêndice, questionários, códigos de programação, tabelas que tomariam muito espaço no meio do trabalho. Artigos, resumos ou qualquer publicação relacionada ao trabalho podem ser utilizados como apêndice.
+
+\apendice{Questionário utilizado para...}
+\label{ap:B}
+
+\begin{questao}
+	\item Esta é a primeira questão com alguns itens:
+		\begin{enumerate}
+			\item Este é o primeiro item
+			\item Segundo item
+		\end{enumerate}
+	\item Esta é a segunda questão:
+		\begin{enumerate}
+			\item Este é o primeiro item
+			\item Segundo item
+		\end{enumerate}
+	\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum sed tortor nec viverra. consectetur adipiscing elit. Nunc dictum sed tortor nec viverra.
+		\begin{enumerate}
+			\item consectetur
+			\item adipiscing
+			\item Nunc
+			\item dictum
+		\end{enumerate}
+\end{questao}
+
+\apendice{Códigos-fontes utilizados para...}
+\label{ap:C}
+
+\lstinputlisting[language=C++,caption={Hello World em C++}]{misc/main.cpp}
+
+
+\begin{lstlisting}[language=Java,caption={Hello World em Java}]
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}
+\end{lstlisting}
+
+\apendice{\textit{IEEE CEFC 2016}}
+\label{ap:D}
+
+*Digest* submetido ao *The 17th Biennial Conference on Eletromagnetic Field Computation, Miami FL - NOV 13-16, 2016, USA*.
+
+%Código fonte para inserir um arquivo em PDF
+\includepdf[pages={-}]{misc/PID4416093.pdf}

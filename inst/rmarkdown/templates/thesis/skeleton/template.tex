@@ -17,14 +17,14 @@
 %%                                                   %%
 %% Consultoria Bibliotecária                         %%
 %%                                                   %%
-%%  Versão 2016 - ShareLaTeX:                        %% 
+%%  Versão 2016 - ShareLaTeX:                        %%
 %%                                                   %%
 %% - Francisco Edvander Pires Santos;                %%
 %% - Juliana Soares Lima;                            %%
 %% - Izabel Lima dos Santos;                         %%
 %% - Kalline Yasmin Soares Feitosa;                  %%
 %% - Eliene Maria Vieira de Moura.                   %%
-%%                                                   %% 
+%%                                                   %%
 %%  Versão 2019,2020 - Overleaf:                          %%
 %%                                                   %%
 %%  Biblioteca de Ciências Humanas:                  %%
@@ -48,10 +48,10 @@
 %%                                                   %%
 %% Colaboradores                                     %%
 %%                                                   %%
-%% -Andrei Bosco Bezerra Torres                      %% 
+%% -Andrei Bosco Bezerra Torres                      %%
 %% (Professor - Sistemas e Mídias Digitais -         %%
 %% Instituto Universidade Virtual - UFC)             %%
-%% Tiago Alves Lima                                  %% 
+%% Tiago Alves Lima                                  %%
 %% (Aluno de Mestrado em Eng. Elétrica)              %%
 %%                                                   %%
 %% Grande parte do trabalho foi adaptado do template %%
@@ -70,7 +70,7 @@
 %%                                                   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[        
+\documentclass[
     a4paper,          % Tamanho da folha A4
     12pt,             % Tamanho da fonte 12pt
     chapter=TITLE,    % Todos os capitulos devem ter caixa alta
@@ -90,7 +90,7 @@
 \trabalhoacademico{$trabalhoacademico$}
 \ehqualificacao{$ehqualificacao$}
 
-\removerbordasdohyperlink{$removerbordasdohyperlink$} 
+\removerbordasdohyperlink{$removerbordasdohyperlink$}
 \cordohyperlink{$cordohyperlink$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,7 +107,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \graduacaoem{$graduacaoem$}
-\habilitacao{$habilitacao$} 
+\habilitacao{$habilitacao$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     Informacao para TCC de Especializacao       %%
@@ -151,7 +151,7 @@
 \orientador{$orientador$}
 \orientadories{$orientadories$}
 \orientadorcentro{$orientadorcentro$}
-\orientadorfeminino{$orientadorfeminino$} 
+\orientadorfeminino{$orientadorfeminino$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%          Informação sobre o Coorientador        %%
@@ -160,7 +160,7 @@
 \coorientador{$coorientador$}
 \coorientadories{$coorientadories$}
 \coorientadorcentro{$coorientadorcentro$}
-\coorientadorfeminino{$coorientadorfeminino$} 
+\coorientadorfeminino{$coorientadorfeminino$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%              Informação sobre a banca           %%
@@ -182,19 +182,19 @@
 \membrodabancaseiscentro{$membrodabancaseiscentro$}
 \membrodabancaseisies{$membrodabancaseisies$}
 
-\begin{document}	
+\begin{document}
 
 	% Elementos pré-textuais
 	\imprimircapa
 	\imprimirfolhaderosto{}
-	\imprimirfichacatalografica{1-pre-textuais/ficha-catalografica}
+	\imprimirfichacatalografica{ficha-catalografica}
 	%\imprimirerrata{elementos-pre-textuais/errata}
 	\imprimirfolhadeaprovacao
-	\imprimirdedicatoria{1-pre-textuais/dedicatoria}
-	\imprimiragradecimentos{1-pre-textuais/agradecimentos}
-	\imprimirepigrafe{1-pre-textuais/epigrafe}
-	\imprimirresumo{1-pre-textuais/resumo}
-	\imprimirabstract{1-pre-textuais/abstract}
+	\imprimirdedicatoria{$dedicatoria$}
+	\imprimiragradecimentos{$agradecimentos$}
+	\imprimirepigrafe{$epigrafe$}
+	\imprimirresumo{$resumo$}
+	\imprimirabstract{$abstract$}
 	\renewcommand*\listfigurename{Lista de Figuras} %Se você comentar esta linha o título da lista fica: LISTA DE ILUSTRAÇÕES
 	\imprimirlistadeilustracoes
 	\imprimirlistadetabelas
@@ -202,32 +202,14 @@
 	%\imprimirlistadealgoritmos
 	%\imprimirlistadecodigosfonte
 	\imprimirlistadeabreviaturasesiglas
-	\imprimirlistadesimbolos{1-pre-textuais/lista-de-simbolos}   
+	\imprimirlistadesimbolos{lib/lista-de-simbolos}
 	\imprimirsumario
-	
+
 	\setcounter{table}{0}% Deixe este comando antes da primeira tabela.
-	
+
 	%Elementos textuais
 	\textual
-	\input{2-textuais/1-introducao}
-	\input{2-textuais/2-fundamentacao-teorica}
-	\input{2-textuais/3-metodologia}
-	\input{2-textuais/4-resultados}
-	\input{2-textuais/5-conclusao}
-	
-	%Elementos pós-textuais	
-	\bibliography{3-pos-textuais/referencias}
-%	\imprimirglossario	
-	\imprimirapendices
-		% Adicione aqui os apendices do seu trabalho
-		\input{3-pos-textuais/apendices/apendice-a}
-		\input{3-pos-textuais/apendices/apendice-b}
-		\input{3-pos-textuais/apendices/apendice-c}
-		\input{3-pos-textuais/apendices/apendice-d}
-	\imprimiranexos
-		% Adicione aqui os anexos do seu trabalho
-		\input{3-pos-textuais/anexos/anexo-a}
-		\input{3-pos-textuais/anexos/anexo-b}		
-    %\imprimirindice
-    
+
+	$body$
+
 \end{document}

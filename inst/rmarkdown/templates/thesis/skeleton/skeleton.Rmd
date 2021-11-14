@@ -159,6 +159,22 @@ output:
 # Localizacao dos arquivos bibliograficos
 bibliography: "bib/referencias.bib"
 link-citations: yes
+
+dedicatoria: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-dedicatoria.Rmd"), 
+  collapse = '\n  ')`
+agradecimentos: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-agradecimentos.Rmd"), 
+  collapse = '\n  ')`
+epigrafe: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-epigrafe.Rmd"), 
+  collapse = '\n  ')`
+resumo: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-resumo.Rmd"), 
+  collapse = '\n  ')`
+abstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), 
+  collapse = '\n  ')`
 ---
 
 ```{r include_packages, include = FALSE}
