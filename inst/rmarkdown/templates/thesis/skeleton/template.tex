@@ -1,246 +1,233 @@
-% This is the Reed College LaTeX thesis template. Most of the work
-% for the document class was done by Sam Noble (SN), as well as this
-% template. Later comments etc. by Ben Salzberg (BTS). Additional
-% restructuring and APA support by Jess Youngberg (JY).
-% Your comments and suggestions are more than welcome; please email
-% them to cus@reed.edu
-%
-% See https://www.reed.edu/cis/help/LaTeX/index.html for help. There are a
-% great bunch of help pages there, with notes on
-% getting started, bibtex, etc. Go there and read it if you're not
-% already familiar with LaTeX.
-%
-% Any line that starts with a percent symbol is a comment.
-% They won't show up in the document, and are useful for notes
-% to yourself and explaining commands.
-% Commenting also removes a line from the document;
-% very handy for troubleshooting problems. -BTS
+% Para utilizar este template siga o tutorial disponível em http://www.biblioteca.ufc.br/wp-content/uploads/2015/09/tutorial-sharelatex.pdf
 
-% As far as I know, this follows the requirements laid out in
-% the 2002-2003 Senior Handbook. Ask a librarian to check the
-% document before binding. -SN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Você deve criar uma conta no Overleaf. Depois,    %%
+%% vá nas opções no canto esquerdo superior da tela  %%
+%% e clique em "Copiar Projeto". Dê um novo nome pa- %%
+%% ra o projeto.                                     %%
+%%                                                   %%
+%% Os principais desenvolvedores deste template são: %%
+%%                                                   %%
+%%            Ednardo Moreira Rodrigues              %%
+%%       (Doutor em Engenharia Elétrica - UFC)       %%
+%%(Coord. do Grupo de Astronomia da Seara da Ciência)%%
+%%                      &                            %%
+%%            Alan Batista de Oliveira               %%
+%%           (Engenheiro Eletricista - UFC)          %%
+%%                                                   %%
+%% Consultoria Bibliotecária                         %%
+%%                                                   %%
+%%  Versão 2016 - ShareLaTeX:                        %% 
+%%                                                   %%
+%% - Francisco Edvander Pires Santos;                %%
+%% - Juliana Soares Lima;                            %%
+%% - Izabel Lima dos Santos;                         %%
+%% - Kalline Yasmin Soares Feitosa;                  %%
+%% - Eliene Maria Vieira de Moura.                   %%
+%%                                                   %% 
+%%  Versão 2019,2020 - Overleaf:                          %%
+%%                                                   %%
+%%  Biblioteca de Ciências Humanas:                  %%
+%% - Francisco Edvander Pires Santos;                %%
+%% - Juliana Soares Lima;                            %%
+%% - Eliene Maria Vieira de Moura;                   %%
+%% - Edmundo Moreira de Sousa Filho.                 %%
+%%                                                   %%
+%% Biblioteca da FEAAC:                              %%
+%% - Izabel Lima dos Santos;                         %%
+%% - Kalline Yasmin Soares Feitosa;                  %%
+%% - Kleber Lima dos Santos.                         %%
+%%                                                   %%
+%%  Biblioteca do Curso de Física:                   %%
+%% - Aline Rodrigues de Lima Mendes;                 %%
+%% - Maria de Jesus Silva dos Santos.                %%
+%%                                                   %%
+%%  Biblioteca Central do Campus do Pici:            %%
+%% - Raquel da Silva Nascimento.                     %%
+%% - Felipe Ferreira da Silva                        %%
+%%                                                   %%
+%% Colaboradores                                     %%
+%%                                                   %%
+%% -Andrei Bosco Bezerra Torres                      %% 
+%% (Professor - Sistemas e Mídias Digitais -         %%
+%% Instituto Universidade Virtual - UFC)             %%
+%% Tiago Alves Lima                                  %% 
+%% (Aluno de Mestrado em Eng. Elétrica)              %%
+%%                                                   %%
+%% Grande parte do trabalho foi adaptado do template %%
+%% da UECE elaborado por:                            %%
+%% Thiago Nascimento  (UECE)                         %%
+%% Project available on:                             %%
+%% https://github.com/thiagodnf/uecetex2             %%
+%%                                                   %%
+%% "Dúvidas, esclarecimentos ou sugestões podem ser  %%
+%% enviadas para o seguinte e-mail:                  %%
+%%                                                   %%
+%%             atendimentobch@ufc.br                 %%
+%%                                                   %%
+%% As últimas atualizações estão descritas no inicio %%
+%% do arquivo "README.md".                           %%
+%%                                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%
-%% Preamble
-%%
-% \documentclass{<something>} must begin each LaTeX document
-\documentclass[12pt,twoside]{reedthesis}
-% Packages are extensions to the basic LaTeX functions. Whatever you
-% want to typeset, there is probably a package out there for it.
-% Chemistry (chemtex), screenplays, you name it.
-% Check out CTAN to see: https://www.ctan.org/
-%%
-\usepackage{graphicx,latexsym}
-\usepackage{amsmath}
-\usepackage{amssymb,amsthm}
-\usepackage{longtable,booktabs,setspace}
-\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
-\usepackage[hyphens]{url}
-% Added by CII
-\usepackage{hyperref}
-\usepackage{lmodern}
-\usepackage{float}
-\floatplacement{figure}{H}
-% Thanks, @Xyv
-\usepackage{calc}
-% End of CII addition
-\usepackage{rotating}
+\documentclass[        
+    a4paper,          % Tamanho da folha A4
+    12pt,             % Tamanho da fonte 12pt
+    chapter=TITLE,    % Todos os capitulos devem ter caixa alta
+    section=Title,    % Todas as secoes devem ter caixa alta somente na primeira letra
+    subsection=Title, % Todas as subsecoes devem ter caixa alta somente na primeira letra
+    oneside,          % Usada para impressao em apenas uma face do papel
+    english,          % Hifenizacoes em ingles
+    spanish,          % Hifenizacoes em espanhol
+    brazil,           % Ultimo idioma eh o idioma padrao do documento
+    fleqn             % Comente esta linha se quiser centralizar as equacoes. Comente também a linha 65 abaixo
+]{lib/abntex2}
 
-% Next line commented out by CII
-%%% \usepackage{natbib}
-% Comment out the natbib line above and uncomment the following two lines to use the new
-% biblatex-chicago style, for Chicago A. Also make some changes at the end where the
-% bibliography is included.
-%\usepackage{biblatex-chicago}
-%\bibliography{thesis}
+\input{lib/preambulo}
 
+\setlength{\mathindent}{0pt} %Complementa o alinhamento de equações para totalmente a esquerda.
 
-% Added by CII (Thanks, Hadley!)
-% Use ref for internal links
-\renewcommand{\hyperref}[2][???]{\autoref{#1}}
-\def\chapterautorefname{Chapter}
-\def\sectionautorefname{Section}
-\def\subsectionautorefname{Subsection}
-% End of CII addition
+\trabalhoacademico{$trabalhoacademico$}
+\ehqualificacao{$ehqualificacao$}
 
-% Added by CII
-\usepackage{caption}
-\captionsetup{width=5in}
-% End of CII addition
+\removerbordasdohyperlink{$removerbordasdohyperlink$} 
+\cordohyperlink{$cordohyperlink$}
 
-% \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Informacao sobre a instituicao          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Syntax highlighting #22
-$if(highlighting-macros)$
-  $highlighting-macros$
-$endif$
+\ies{$ies$}
+\iessigla{$iessigla$}
+\centro{$centro$}
+\departamento{$departamento$}
 
-% To pass between YAML and LaTeX the dollar signs are added by CII
-\title{$title$}
-\author{$author$}
-% The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{$date$}
-\division{$division$}
-\advisor{$advisor$}
-\institution{$institution$}
-\degree{$degree$}
-%If you have two advisors for some reason, you can use the following
-% Uncommented out by CII
-$if(altadvisor)$
-\altadvisor{$altadvisor$}
-$endif$
-% End of CII addition
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Informacao para TCC de Graduacao         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% Remember to use the correct department!
-\department{$department$}
-% if you're writing a thesis in an interdisciplinary major,
-% uncomment the line below and change the text as appropriate.
-% check the Senior Handbook if unsure.
-%\thedivisionof{The Established Interdisciplinary Committee for}
-% if you want the approval page to say "Approved for the Committee",
-% uncomment the next line
-%\approvedforthe{Committee}
+\graduacaoem{$graduacaoem$}
+\habilitacao{$habilitacao$} 
 
-% Added by CII
-%%% Copied from knitr
-%% maxwidth is the original width if it's less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
-}
-\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     Informacao para TCC de Especializacao       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% From {rticles}
-$if(csl-refs)$
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
-  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
-  {\par}
-% For Pandoc 2.11+
-% As noted by @mirh [2] is needed instead of [3] for 2.12
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc} % for calculating minipage widths
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-$endif$
+\especializacaoem{$especializacaoem$}
 
-\renewcommand{\contentsname}{Table of Contents}
-% End of CII addition
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Informacao para Dissertacao             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setlength{\parskip}{0pt}
+\programamestrado{$programamestrado$}
+\nomedomestrado{$nomedomestrado$}
+\mestreem{$mestreem$}
+\areadeconcentracaomestrado{$areadeconcentracaomestrado$}
 
-% Added by CII
-$if(space_between_paragraphs)$
-  %\setlength{\parskip}{\baselineskip}
-  \usepackage[parfill]{parskip}
-$endif$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%               Informação para Tese              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\programadoutorado{$programadoutorado$}
+\nomedodoutorado{$nomedodoutorado$}
+\doutorem{$doutorem$}
+\areadeconcentracaodoutorado{$areadeconcentracaodoutorado$}
 
-\Acknowledgements{
-$acknowledgements$
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Informacoes relacionadas ao trabalho       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\Dedication{
-$dedication$
-}
+\autor{$autor$}
+\titulo{$titulo$}
+\data{$data$}
+\local{$local$}
 
-\Preface{
-$preface$
-}
+\dataaprovacao{$dataaprovacao$}
 
-\Abstract{
-$abstract$
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           Informação sobre o Orientador         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$for(header-includes)$
-	$header-includes$
-$endfor$
-% End of CII addition
-%%
-%% End Preamble
-%%
-%
+\orientador{$orientador$}
+\orientadories{$orientadories$}
+\orientadorcentro{$orientadorcentro$}
+\orientadorfeminino{$orientadorfeminino$} 
 
-\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          Informação sobre o Coorientador        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Everything below added by CII
-$if(title)$
-  \maketitle
-$endif$
+\coorientador{$coorientador$}
+\coorientadories{$coorientadories$}
+\coorientadorcentro{$coorientadorcentro$}
+\coorientadorfeminino{$coorientadorfeminino$} 
 
-\frontmatter % this stuff will be roman-numbered
-\pagestyle{empty} % this removes page numbers from the frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%              Informação sobre a banca           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$if(acknowledgements)$
-  \begin{acknowledgements}
-    $acknowledgements$
-  \end{acknowledgements}
-$endif$
+\membrodabancadois{$membrodabancadois$}
+\membrodabancadoiscentro{$membrodabancadoiscentro$}
+\membrodabancadoisies{$membrodabancadoisies$}
+\membrodabancatres{$membrodabancatres$}
+\membrodabancatrescentro{$membrodabancatrescentro$}
+\membrodabancatresies{$membrodabancatresies$}
+\membrodabancaquatro{$membrodabancaquatro$}
+\membrodabancaquatrocentro{$membrodabancaquatrocentro$}
+\membrodabancaquatroies{$membrodabancaquatroies$}
+\membrodabancacinco{$membrodabancacinco$}
+\membrodabancacincocentro{$membrodabancacincocentro$}
+\membrodabancacincoies{$membrodabancacincoies$}
+\membrodabancaseis{$membrodabancaseis$}
+\membrodabancaseiscentro{$membrodabancaseiscentro$}
+\membrodabancaseisies{$membrodabancaseisies$}
 
-$if(preface)$
-  \begin{preface}
-    $preface$
-  \end{preface}
-$endif$
+\begin{document}	
 
-$if(toc)$
-  \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-  \setcounter{secnumdepth}{$toc-depth$}
-  \setcounter{tocdepth}{$toc-depth$}
-  \tableofcontents
-$endif$
-
-$if(lot)$
-  \listoftables
-$endif$
-
-$if(lof)$
-  \listoffigures
-$endif$
-
-$if(abstract)$
-  \begin{abstract}
-    $abstract$
-  \end{abstract}
-$endif$
-
-$if(dedication)$
-  \begin{dedication}
-    $dedication$
-  \end{dedication}
-$endif$
-
-\mainmatter % here the regular arabic numbering starts
-\pagestyle{fancyplain} % turns page numbering back on
-
-$body$
-
-
-% Index?
-
+	% Elementos pré-textuais
+	\imprimircapa
+	\imprimirfolhaderosto{}
+	\imprimirfichacatalografica{1-pre-textuais/ficha-catalografica}
+	%\imprimirerrata{elementos-pre-textuais/errata}
+	\imprimirfolhadeaprovacao
+	\imprimirdedicatoria{1-pre-textuais/dedicatoria}
+	\imprimiragradecimentos{1-pre-textuais/agradecimentos}
+	\imprimirepigrafe{1-pre-textuais/epigrafe}
+	\imprimirresumo{1-pre-textuais/resumo}
+	\imprimirabstract{1-pre-textuais/abstract}
+	\renewcommand*\listfigurename{Lista de Figuras} %Se você comentar esta linha o título da lista fica: LISTA DE ILUSTRAÇÕES
+	\imprimirlistadeilustracoes
+	\imprimirlistadetabelas
+	%\imprimirlistadequadros
+	%\imprimirlistadealgoritmos
+	%\imprimirlistadecodigosfonte
+	\imprimirlistadeabreviaturasesiglas
+	\imprimirlistadesimbolos{1-pre-textuais/lista-de-simbolos}   
+	\imprimirsumario
+	
+	\setcounter{table}{0}% Deixe este comando antes da primeira tabela.
+	
+	%Elementos textuais
+	\textual
+	\input{2-textuais/1-introducao}
+	\input{2-textuais/2-fundamentacao-teorica}
+	\input{2-textuais/3-metodologia}
+	\input{2-textuais/4-resultados}
+	\input{2-textuais/5-conclusao}
+	
+	%Elementos pós-textuais	
+	\bibliography{3-pos-textuais/referencias}
+%	\imprimirglossario	
+	\imprimirapendices
+		% Adicione aqui os apendices do seu trabalho
+		\input{3-pos-textuais/apendices/apendice-a}
+		\input{3-pos-textuais/apendices/apendice-b}
+		\input{3-pos-textuais/apendices/apendice-c}
+		\input{3-pos-textuais/apendices/apendice-d}
+	\imprimiranexos
+		% Adicione aqui os anexos do seu trabalho
+		\input{3-pos-textuais/anexos/anexo-a}
+		\input{3-pos-textuais/anexos/anexo-b}		
+    %\imprimirindice
+    
 \end{document}
-
