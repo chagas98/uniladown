@@ -141,4 +141,43 @@ membrodabancacincoies: 'Universidade do Membro da Banca Cinco (SIGLA)'
 membrodabancaseis: 'Prof. Dr. Xxxxxxx Xxxxxx Xxxxxxx'
 membrodabancaseiscentro: ''
 membrodabancaseisies: 'Universidade do Membro da Banca Seis (SIGLA)'
+
+#####################################################
+##            Configuracoes do Rmarkdown           ##
+#####################################################
+
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
+output: 
+  ufscdown::thesis_pdf: 
+    citation_package: biblatex
+    bib_engine: biber
+#  ufcdown::thesis_gitbook: default
+#  ufcdown::thesis_word: default
+#  ufcdown::thesis_epub: default
+
+# Localizacao dos arquivos bibliograficos
+bibliography: "bib/referencias.bib"
+link-citations: yes
 ---
+
+```{r include_packages, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message=FALSE, 
+                      warning = FALSE, fig.ext='png', fig.align='center', 
+                      fig.path = "figure/", fig.pos = "H", dev = "png", 
+                      dpi = 600, out.width = "70%")
+type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+# This chunk ensures that the ufcdown package is
+# installed and loaded. This ufcdown package includes
+# the template files for the thesis.
+if(!require(remotes))
+  install.packages("remotes", repos = "http://cran.rstudio.com")
+if(!require(ufcdown))
+  remotes::install_github("damarals/ufcdown")
+library(ufscdown)
+```
+
+<!-- The {.unnumbered} option means that the introduction will be 
+"Chapter 0." You can also use {-} for no numbers
+on chapters.
+-->
