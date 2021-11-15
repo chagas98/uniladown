@@ -174,7 +174,7 @@ abstract: |
 ```{r include_packages, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message=FALSE, 
                       warning = FALSE, fig.ext='png', fig.align='center', 
-                      fig.path = "figure/", fig.pos = "H", dev = "png", 
+                      fig.path = "figure/", fig.pos = "h!", dev = "png", 
                       dpi = 600, out.width = "70%")
 type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 library(ufcdown)
