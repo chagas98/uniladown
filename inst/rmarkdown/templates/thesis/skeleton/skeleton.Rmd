@@ -179,8 +179,3 @@ knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message=FALSE,
 type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 library(ufcdown)
 ```
-
-<!-- The {.unnumbered} option means that the introduction will be 
-"Chapter 0." You can also use {-} for no numbers
-on chapters.
--->
