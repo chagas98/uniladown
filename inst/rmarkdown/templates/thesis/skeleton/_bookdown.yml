@@ -1,5 +1,7 @@
 book_filename: "thesis"
 chapter_name: "Chapter "
-rmd_files: ["index.Rmd", "01-introducao.Rmd", "02-trabalhos-relacionados.Rmd", "03-fundamentacao-teorica.Rmd", "04-metodologia.Rmd", "05-resultados.Rmd", "06-conclusao.Rmd"]
+rmd_files: ["skeleton.Rmd", "01-introducao.Rmd", "02-trabalhos-relacionados.Rmd", 
+"03-fundamentacao-teorica.Rmd", "04-metodologia.Rmd", "05-resultados.Rmd", 
+"06-conclusao.Rmd", "10-referencias.Rmd", "11-apendices.Rmd", "12-anexos.Rmd"]
 download: [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]]
 delete_merged_file: true

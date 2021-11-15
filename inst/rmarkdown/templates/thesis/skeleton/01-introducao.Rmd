@@ -5,9 +5,9 @@ Para começar a utilizar este *template*, siga o tutorial clicando no seguinte *
 
 For further references see \href{http://www.sharelatex.com}{Something Linky} or go to the next url: \url{http://www.sharelatex.com} or open the next file \href{run:./file.txt}{File.txt}
 
-Neste *template*, o autor irá encontrar diversas instruções e exemplos dos recursos do uso do \LaTeX~na plataforma *Overleaf*. O $\LaTeX$ foi desenvolvido, inicialmente, na década de 80, por Leslie Lamport e é utilizado amplamente na produção de textos matemáticos e científicos, devido a sua alta qualidade tipográfica \cite{goossens1994latex}. 
+Neste *template*, o autor irá encontrar diversas instruções e exemplos dos recursos do uso do \LaTeX~na plataforma *Overleaf*. O \LaTeX foi desenvolvido, inicialmente, na década de 80, por Leslie Lamport e é utilizado amplamente na produção de textos matemáticos e científicos, devido a sua alta qualidade tipográfica \cite{goossens1994latex}. 
 
-O *Overleaf* é uma plataforma *online* que pode ser acessado por meio de qualquer navegador de internet até mesmo de um *smartphone*. Essa plataforma dispensa a instalação de aplicativos no computador para desenvolver trabalhos em $\LaTeX$. Também, não é necessário instalar *packages*, ou seja, pacotes que permitem diferentes efeitos na formatação e no visual do trabalho. Todos os *packages* que este *template* utiliza são encontrados *online*. 
+O *Overleaf* é uma plataforma *online* que pode ser acessado por meio de qualquer navegador de internet até mesmo de um *smartphone*. Essa plataforma dispensa a instalação de aplicativos no computador para desenvolver trabalhos em \LaTeX. Também, não é necessário instalar *packages*, ou seja, pacotes que permitem diferentes efeitos na formatação e no visual do trabalho. Todos os *packages* que este *template* utiliza são encontrados *online*. 
 
 Apresentam-se, também, neste modelo, algumas orientações de como desenvolver um trabalho acadêmico. Entretanto, este arquivo deve ser editado pelo autor de acordo com o seu trabalho sendo que a formatação já está de acordo com o aceito pela Universidade Federal do Ceará.  
 

@@ -6,12 +6,9 @@ Evite começar da seção secundária, ou seja, não passe direto do título do 
 
 ## Citações bibliográficas {#sec:citacoes}
 
-Esta frase mostra como citar um livro sobre descargas atmosféricas \cite{rakov2003lightning}. Também podem ser citados *sites* como \citeonline{elat2015densidade}. Você precisa escrever o código da referência no arquivo "referencia.bib" dentro da pasta "elementos-pos-textuais". Veja esse, onde estão alguns exemplos que já foram testados.        
+Esta frase mostra como citar um livro sobre descargas atmosféricas \cite{rakov2003lightning}. Você precisa escrever o código da referência no arquivo "referencia.bib" dentro da pasta "elementos-pos-textuais". Veja esse, onde estão alguns exemplos que já foram testados.        
 
 Referenciando outro livro \cite{LangtangenLogg2017}. Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
-
-Referenciando outro site \nocite{secretaria1999}(SÃO PAULO, 1999). Neste caso, foi utilizado o comando \verb=\nocite{}=
-que faz com que a referência aparaça e em seguida foi escrito manualmente (SÃO PAULO, 1999). Esse recurso foi utilizado porque se existem particularidades ao citar um estado. E não havia uma macro elaborada para esta citação. Assim, sempre que o estila da citação tiver uma particularidade não contemplada pelo nosso modelo, é possível utilizar este recurso manual.
 
 Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Citando uma norma \cite{NBR10520:2002}.
     
@@ -39,7 +36,7 @@ A posição da figura deve ser o mais próximo logo após ter sido chamada no te
     \captionsetup{width=16cm}Da mesma largura que a figura
 	\Caption{\label{fig:reitoria} Fotografia da reitoria da Universidade Federal do Ceará}
 	\UFCfig{}{
-		\includegraphics[width=16cm]{figuras/exemplo-1}
+		\includegraphics[width=16cm]{figure/exemplo-1}
 	}{
 		\Fonte{\citeonline{UFC2012}.}
 	}	
@@ -60,7 +57,7 @@ A Figura \ref{fig:sondas} texto texto texto texto texto texto texto texto texto 
 	\captionsetup{width=14cm}Da mesma largura que a figura
 	\Caption{\label{fig:sondas} Gráfico da atmosfera superior}	
 	\UFCfig{}{
-		\includegraphics[width=14cm]{figuras/sondas}
+		\includegraphics[width=14cm]{figure/sondas}
 	}{
 		\Fonte{adaptado da \citeonline{NASA2016}.}}	
 \end{figure}
@@ -102,8 +99,7 @@ A Tabela \ref{tab:exemplo-1}... texto texto texto texto texto texto texto texto 
 	
 Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
 
-acrlong{DATASUS},\acrlong{DNV},\acrlong{DO},\acrlong{ESF},\acrlong{IBGE},\acrlong{MFC},\acrlong{MI},\acrlong{MS},\acrlong{NV},\acrlong{ODM},\acrlong{OI},\acrlong{OMS},\acrlong{ONU},\acrlong{PNI},\acrlong{PSF},\acrlong{RIPSA},\acrlong{RN},\acrlong{SIM},\acrlong{SINASC},\acrlong{SUS},\acrlong{TMI},\acrlong{TMMFC}
-
+\acrlong{INPE}
 
 \begin{itemize}
     \item Integer non lacinia magna. Aenean tempor lorem tellus, non sodales nisl commodo ut

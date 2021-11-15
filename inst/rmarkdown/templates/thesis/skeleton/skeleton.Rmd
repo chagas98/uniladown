@@ -146,17 +146,18 @@ membrodabancaseisies: 'Universidade do Membro da Banca Seis (SIGLA)'
 ##            Configuracoes do Rmarkdown           ##
 #####################################################
 
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
 output: 
-  ufcdown::thesis_pdf:
-    citation_package: biblatex
+  ufcdown::thesis_pdf: 
     bib_engine: biber
 #  ufcdown::thesis_gitbook: default
 #  ufcdown::thesis_word: default
 #  ufcdown::thesis_epub: default
 
 # Localizacao dos arquivos bibliograficos
-bibliography: "bib/referencias.bib"
-link-citations: yes
+bibliography: bib/referencias.bib
+biblio-style: "abntex2-alf"
 
 dedicatoria: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-dedicatoria.Rmd", encoding = "UTF-8"), collapse = '\n  ')`

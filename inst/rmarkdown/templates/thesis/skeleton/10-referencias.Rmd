@@ -1,1 +1,5 @@
+\backmatter
+\bibliographystyle{csl/abntex2-alf}
 \bibliography{bib/referencias}
+
+\markboth{Referências}{REFERÊNCIAS}
