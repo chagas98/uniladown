@@ -1,29 +1,28 @@
 Package: ufcdown
 Title: An updated R Markdown thesis template using the bookdown package
-Version: 0.2.0.9000
-Authors@R: c(
-    person("Chester", "Ismay", email = "chester.ismay@gmail.com", role = c("cre", "aut")),
-    person("Nick", "Solomon", email = "nick@nicksolomon.me", role = "aut"),
-    person("Shir", "Dekel", email = "shirdekel@yahoo.com.au", role = "ctb"))
+Version: 0.0.1
+Authors@R: 
+    person(given = "Daniel",
+           family = "Amaral",
+           role = c("aut", "cre"),
+           email = "silva.daniel86@Gmail.com",
+           comment = c(ORCID = "0000-0001-8758-0973"))
 Description: Using the bookdown package and LaTeX and Word thesis templates from
-    Reed College, this package aims to encourage reproducible research using
+    UFC College, this package aims to encourage reproducible research using
     simple Markdown syntax while embedding all of the R code to produce plots
     and analyses as well.
-Maintainer: Chester Ismay <chester.ismay@gmail.com>
-Depends:
-    R (>= 3.2.0)
-Imports: 
-    dplyr,
-    ggplot2,
-    bookdown,
-    knitr,
-    here,
-    R.utils
-Suggests:
-    remotes,
-    usethis
 License: MIT + file LICENSE
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 3.2.0)
 LazyData: true
-SystemRequirements: pandoc (>= 1.18) - https://pandoc.org
-RoxygenNote: 7.1.1
+Imports:
+  bookdown
+Suggests:
+  tinytex,
+  kableExtra,
+  cowplot,
+  stargazer
+SystemRequirements: pandoc (>= 1.18) - http://pandoc.org
+RoxygenNote: 7.0.2
