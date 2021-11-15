@@ -32,6 +32,7 @@ compile:
 	@echo "*                                                       *"
 	@echo "*********************************************************"
 	@echo "Compilando..."
+	Rscript -e "bookdown::render_book('index.Rmd', ufcdown::thesis_pdf(bib_engine = 'biber'))"
 	pdflatex $(filename).tex
 	bibtex $(filename)
 	makeglossaries $(filename)
