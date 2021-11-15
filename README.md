@@ -4,6 +4,9 @@
 # ufcdown
 
 <!-- badges: start -->
+
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 <!-- badges: end -->
 
 This project was inspired by the
@@ -70,23 +73,21 @@ tinytex::tlmgr_install("babel-portuges")
 To use **ufcdown** from
 [RStudio](http://www.rstudio.com/products/rstudio/download/):
 
-1.  Ensure that you have already installed LaTeX and the fonts described
-    above, and are using the latest version of
-    [RStudio](http://www.rstudio.com/products/rstudio/download/). You
-    can use `ufcdown` without RStudio. For example, you can write the
-    `Rmd` files in your favourite text editor
-    (e.g. [Atom](https://atom.io/),
-    [Notepad++](https://notepad-plus-plus.org/)). But RStudio is
-    probably the easiest tool for writing both R code and text in your
-    thesis. It also provides a nice way to build your thesis while
-    editing. We’ll proceed assuming that you have decided to use the
-    RStudio workflow.
+1\) Ensure that you have already installed LaTeX and the fonts described
+above, and are using the latest version of
+[RStudio](http://www.rstudio.com/products/rstudio/download/). You can
+use `ufcdown` without RStudio. For example, you can write the `Rmd`
+files in your favourite text editor (e.g. [Atom](https://atom.io/),
+[Notepad++](https://notepad-plus-plus.org/)). But RStudio is probably
+the easiest tool for writing both R code and text in your thesis. It
+also provides a nice way to build your thesis while editing. We’ll
+proceed assuming that you have decided to use the RStudio workflow.
 
-2.  Install the **bookdown** and **ufcdown** packages. Note that
-    **ufcdown** is not available on CRAN at the moment and that’s why
-    `install.packages("ufcdown")` won’t work. Use
-    `remotes::install_github()` as shown below instead to install the
-    package.
+2\) Install the **bookdown** and **ufcdown** packages. Note that
+**ufcdown** is not available on CRAN at the moment and that’s why
+`install.packages("ufcdown")` won’t work. Use
+`remotes::install_github()` as shown below instead to install the
+package.
 
 ``` r
 if (!require("remotes")) 
@@ -99,16 +100,16 @@ remotes::install_github("damarals/ufcdown", dependencies = TRUE)
 Note that you may need to restart RStudio at this point for the
 following dialog to show up.
 
-3.  Use the **New R Markdown** dialog to select **Thesis**:
+3\) Use the **New R Markdown** dialog to select **Thesis**:
 
     ![New R Markdown](thesis_rmd.png)
 
-    Note that this will currently only **Knit** if you name the
-    directory `index` as shown above.
+    Note that this will currently only **Knit** if you name the directory `index` 
+    as shown above. 
 
-4.  After choosing which type of output you’d like in the YAML at the
-    top of index.Rmd, **Knit** the `index.Rmd` file to get the book in
-    PDF formats.
+4\) After choosing which type of output you’d like in the YAML at the
+top of index.Rmd, **Knit** the `index.Rmd` file to get the book in PDF
+formats.
 
 ### Day-to-day writing of your thesis
 
@@ -125,13 +126,26 @@ RStudio, see <http://happygitwithr.com/>.
 
 ## Rendering
 
-To render your thesis into a PDF, open a terminal in the same directory
-as the `index.Rmd` file and run the `make` command. Tip: the `make`
-command can be given from the Rstudio terminal (not console).
+To render your thesis into a PDF, open a powershell, terminal, git bash,
+cmd, etc… in the same directory as the `index.Rmd` file and run the
+`make` command. Tip: the `make` command can be given from the Rstudio
+terminal (not console).
 
 The `make` command is needed to correctly insert the glossary page. If
 you are knitting (knit button) in Rstudio, the Thesis document in pdf
-will be generated, but with the glossary page empty (blank page)
+will be generated, but with the glossary page empty (blank page).
+
+If you are using Windows, you can install GNU `make` with `chocolatey`,
+a well-maintained package manager, which will add make to the global
+path and runs on all CLIs (powershell, git bash, cmd, etc…) saving you a
+ton of time in both maintenance and initial setup to get make running.
+
+1.  Install the [chocolatey package manager for
+    Windows](https://chocolatey.org/install) compatible to Windows 7+ /
+    Windows Server 2003+
+
+2.  Run `choco install make` in powershell, terminal, git bash, cmd,
+    etc…
 
 The PDF file of your thesis (`thesis.pdf`) will be deposited in the same
 directory of `index.Rmd`, by default.
