@@ -102,10 +102,10 @@ following dialog to show up.
 
 3\) Use the **New R Markdown** dialog to select **Thesis**:
 
-    ![New R Markdown](thesis_rmd.png)
+![New R Markdown](thesis_rmd.png)
 
-    Note that this will currently only **Knit** if you name the directory `index` 
-    as shown above. 
+Note that this will currently only **Knit** if you name the directory
+`index` as shown above.
 
 4\) After choosing which type of output you’d like in the YAML at the
 top of index.Rmd, **Knit** the `index.Rmd` file to get the book in PDF
